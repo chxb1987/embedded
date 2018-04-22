@@ -1,3 +1,3 @@
 embedded
 
-This is a template of i.mx rt1050
+This is a example of i.mx rt1050
