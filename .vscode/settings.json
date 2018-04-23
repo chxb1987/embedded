@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "fsl_debug_console.h": "c",
+        "fsl_gpio.h": "c",
+        "board.h": "c",
+        "fsl_iomuxc.h": "c"
+    }
+}
