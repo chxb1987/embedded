@@ -3,5 +3,5 @@ embedded
 
 This is a example of i.mx rt1050
 
-emmmmm\<br>
+emmmmm<br>
 oh year
