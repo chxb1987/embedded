@@ -1,7 +1,6 @@
-embedded
+i\.mx rt1052
 ====
+这是基于野火i\.mx rt1052 mini开发板的例程进行的测试
 
-This is a example of i.mx rt1050
 
 emmmmm<br>
-oh year

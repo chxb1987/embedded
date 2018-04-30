@@ -4,19 +4,17 @@
   * @author  fire
   * @version V1.0
   * @date    2018-xx-xx
-  * @brief   ç”¨V2.3.1ç‰ˆæœ¬åº“å»ºçš„å·¥ç¨‹æ¨¡æ¿
+  * @brief   ÓÃV2.3.1°æ±¾¿â½¨µÄ¹¤³ÌÄ£°å
   ******************************************************************
   * @attention
   *
-  * å®éªŒå¹³å°:é‡ç«  i.MXRT1052å¼€å‘æ¿ 
-  * è®ºå›    :http://www.firebbs.cn
-  * æ·˜å®    :http://firestm32.taobao.com
+  * ÊµÑéÆ½Ì¨:Ò°»ğ  i.MXRT1052¿ª·¢°å 
+  * ÂÛÌ³    :http://www.firebbs.cn
+  * ÌÔ±¦    :http://firestm32.taobao.com
   *
   ******************************************************************
   */
 #include "fsl_debug_console.h"
-#include "fsl_gpio.h"
-#include "fsl_gpt.h"
 
 #include "board.h"
 #include "pin_mux.h"
@@ -34,23 +32,23 @@
  *******************************************************************/
 
 /**
-  * @brief  ä¸»å‡½æ•°
-  * @param  æ— 
-  * @retval æ— 
+  * @brief  Ö÷º¯Êı
+  * @param  ÎŞ
+  * @retval ÎŞ
   */
 int main(void)
 {
-	  /* åˆå§‹åŒ–å†…å­˜ç®¡ç†å•å…ƒ */
+	  /* ³õÊ¼»¯ÄÚ´æ±£»¤µ¥Ôª */
     BOARD_ConfigMPU();
-		/* åˆå§‹åŒ–å¼€å‘æ¿å¼•è„š */
+		/* ³õÊ¼»¯¿ª·¢°åÒı½Å */
     BOARD_InitPins();
-		/* åˆå§‹åŒ–å¼€å‘æ¿æ—¶é’Ÿ */
+		/* ³õÊ¼»¯¿ª·¢°åÊ±ÖÓ */
     BOARD_BootClockRUN();
-		/* åˆå§‹åŒ–è°ƒè¯•ä¸²å£ */
+		/* ³õÊ¼»¯µ÷ÊÔ´®¿Ú */
 		BOARD_InitDebugConsole();
-		/* æ‰“å°ç³»ç»Ÿæ—¶é’Ÿ */
+		/* ´òÓ¡ÏµÍ³Ê±ÖÓ */
 		PRINTF("\r\n");
-		PRINTF("*****æ¬¢è¿ä½¿ç”¨ é‡ç«i.MX RT1052 å¼€å‘æ¿*****\r\n");
+		PRINTF("*****»¶Ó­Ê¹ÓÃ Ò°»ği.MX RT1052 ¿ª·¢°å*****\r\n");
 		PRINTF("CPU:             %d Hz\r\n", CLOCK_GetFreq(kCLOCK_CpuClk));
 		PRINTF("AHB:             %d Hz\r\n", CLOCK_GetFreq(kCLOCK_AhbClk));
 		PRINTF("SEMC:            %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SemcClk));
@@ -59,7 +57,7 @@ int main(void)
 		PRINTF("SYSPLLPFD1:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd1Clk));
 		PRINTF("SYSPLLPFD2:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd2Clk));
 		PRINTF("SYSPLLPFD3:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd3Clk));	
-    /* åœ¨è¿™é‡Œæ·»åŠ ä½ çš„ä»£ç ^_^. */
+    /* ÔÚÕâÀïÌí¼ÓÄãµÄ´úÂë^_^. */
 	
 		
     while(1)

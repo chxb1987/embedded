@@ -146,7 +146,7 @@ sources:
  * Variables for BOARD_BootClockRUN configuration
  ******************************************************************************/
 const clock_arm_pll_config_t armPllConfig_BOARD_BootClockRUN = {
-    .loopDivider = 100, /* PLL loop divider, Fout = Fin * 50 */
+    .loopDivider = 88, /* PLL loop divider, Fout = Fin * 44 */
 };
 const clock_sys_pll_config_t sysPllConfig_BOARD_BootClockRUN = {
     .loopDivider = 1,                         /* PLL loop divider, Fout = Fin * ( 20 + loopDivider*2 + numerator / denominator ) */
@@ -221,9 +221,9 @@ void BOARD_BootClockRUN(void)
     /* Set Semc alt clock source. */
     CLOCK_SetMux(kCLOCK_SemcAltMux, 0);
     /* Set Semc clock source. */
-    CLOCK_SetMux(kCLOCK_SemcMux, 0);
+    CLOCK_SetMux(kCLOCK_SemcMux, 1);
     /* Set SEMC_PODF. */
-    CLOCK_SetDiv(kCLOCK_SemcDiv, 7);
+    CLOCK_SetDiv(kCLOCK_SemcDiv, 1);
 #endif
 #if !(defined(XIP_EXTERNAL_FLASH) && (XIP_EXTERNAL_FLASH == 1))
     /* Set Flexspi clock source. */
